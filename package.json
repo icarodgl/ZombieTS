@@ -1,10 +1,12 @@
 {
   "name": "excalibur-webpack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "a webpack starter for excaliburjs projects",
   "main": "index.js",
   "scripts": {
+    "commit": "git add . && git-cz && npm run release && git push",
+    "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server --env.mode development --open",
@@ -32,7 +34,8 @@
     "webpack-merge": "4.1.2"
   },
   "dependencies": {
-    "excalibur": "0.18.0"
+    "excalibur": "0.18.0",
+    "standard-version": "^4.4.0"
   },
   "config": {
     "commitizen": {
