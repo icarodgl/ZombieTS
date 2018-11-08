@@ -29,6 +29,7 @@ player.addDrawing("idle", playerIdleSheet.getAnimationForAll(game, 125));
 menu.add(player);
 
 game.add("menu", menu);
+game.add("lv1", levelOne);
 
 let loader = new ex.Loader();
 for (let key in Resources) {
@@ -36,5 +37,5 @@ for (let key in Resources) {
 }
 
 game.start(loader).then(() => {
-  game.goToScene("menu");
+  game.goToScene("lv1");
 });
