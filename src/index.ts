@@ -21,17 +21,12 @@ const game = new Game();
 const menu = new Menu();
 const player = new Player();
 
-player.set_animations(game);
+player.criar(game);
 
 game.add("menu", menu);
 //game.add("lv1", levelOne);
 
 let loader = new ex.Loader();
-
-for (let key in Resources) {
-  loader.addResource(Resources[key]);
-}
-
 game.start(loader).then(() => {
   game.goToScene("menu");
 });
