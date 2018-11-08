@@ -3,7 +3,7 @@ import { Resources } from "../../resources";
 import { Bullet } from "../bullets/bullets";
 export class Player extends ex.Actor {
   public IdleSheet = new ex.SpriteSheet(Resources.Player, 4, 1, 50, 50);
-  passo = 10;
+  passo = 5;
 
   constructor() {
     super();
@@ -28,8 +28,13 @@ export class Player extends ex.Actor {
       (pointers: ex.Input.PointerEvent) => {
         let gamex = pointers.pos.x - this.pos.x;
         let gamey = pointers.pos.y - this.pos.y;
-        this.rotation = Math.atan2(gamey, gamex);
-        let bullet = new Bullet(this.x, this.y, gamex * 10, gamey * 10, this);
+        let bullet = new Bullet(
+          this.x,
+          this.y,
+          Math.cos(this.rotation) * 1000,
+          Math.sin(this.rotation) * 1000,
+          this
+        );
         game.add(bullet);
       }
     );
