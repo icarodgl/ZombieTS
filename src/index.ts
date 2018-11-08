@@ -24,7 +24,7 @@ const player = new Player();
 player.set_animations(game);
 
 game.add("menu", menu);
-game.add("lv1", levelOne);
+//game.add("lv1", levelOne);
 
 let loader = new ex.Loader();
 
@@ -33,5 +33,5 @@ for (let key in Resources) {
 }
 
 game.start(loader).then(() => {
-  game.goToScene("lv1");
+  game.goToScene("menu");
 });

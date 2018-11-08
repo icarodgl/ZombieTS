@@ -8,8 +8,8 @@ export class PrimeiroMapa extends ex.TileMap {
     image: Resources.Areia,
     rows: 1,
     columns: 1,
-    spWidth: 50,
-    spHeight: 50
+    spWidth: 100,
+    spHeight: 100
   });
   tilesprite = new ex.TileSprite("root", 0);
 
