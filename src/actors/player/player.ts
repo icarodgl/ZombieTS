@@ -1,5 +1,6 @@
 import * as ex from "excalibur";
 export class Player extends ex.Actor {
+  name: String;
   constructor() {
     super();
     this.setWidth(50);
