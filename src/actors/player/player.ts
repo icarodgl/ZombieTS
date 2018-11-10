@@ -2,14 +2,11 @@ import * as ex from "excalibur";
 import { Resources } from "../../resources";
 import { Bullet } from "../bullets/bullets";
 export class Player extends ex.Actor {
-<<<<<<< HEAD
   name: String;
-=======
   public IdleSheet = new ex.SpriteSheet(Resources.Player, 4, 4, 50, 50);
   public armaIdleSheet = new ex.SpriteSheet(Resources.Player, 4, 3, 50, 50);
   passo = 5;
   hp = 1;
->>>>>>> e0a9ad065bd1d47ee66de9bb14ba783857d7ce25
   constructor() {
     super();
     this.setWidth(50);
