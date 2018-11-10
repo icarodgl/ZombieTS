@@ -1,6 +1,6 @@
 {
   "name": "excalibur-webpack",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "description": "a webpack starter for excaliburjs projects",
   "main": "index.js",
